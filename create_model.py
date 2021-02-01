@@ -13,7 +13,7 @@ def first_model(x_train,y_train):
     model.compile(optimizer ='adam',
                   loss = 'sparse_categorical_crossentropy',
                   metrics =['accuracy'])
-    history = model.fit(x_train, y_train, epochs = 3)
+    history = model.fit(x_train, y_train,validation_split=0.1, epochs = 6)
 
     model.save('first_model.model')
     print("model created")

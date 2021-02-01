@@ -13,15 +13,17 @@ def evaluate(x_test, y_test):
 
 def plot(history):
     plt.plot(history.history['acc'])
+    plt.plot((history.history['val_acc']))
     plt.title('model accuracy')
     plt.xlabel('epoch')
     plt.ylabel('accuracy')
-    plt.legend(['train'],loc='upper_left')
+    plt.legend(['train', 'val'],loc='upper left')
     plt.show()
 
     plt.plot(history.history['loss'])
+    plt.plot((history.history['val_loss']))
     plt.title('model loss')
     plt.xlabel('epoch')
     plt.ylabel('loss')
-    plt.legend(['train'], loc='upper_left')
+    plt.legend(['train', 'val'], loc='upper left')
     plt.show()
