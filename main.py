@@ -9,6 +9,7 @@ import pandas as pd
 
 import getInfo
 import ignoreGreyscale
+import create_model
 #load data
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 #normalize train_data to have values between [0,1]
@@ -21,5 +22,5 @@ getInfo.plot(x_train)
 
 x_train = ignoreGreyscale.toBlack(x_train)
 
-
+create_model.first_model(x_train,y_train)
 
