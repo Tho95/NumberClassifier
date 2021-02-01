@@ -14,4 +14,5 @@ def first_model(x_train,y_train):
                   loss = 'sparse_categorical_crossentropy',
                   metrics =['accuracy'])
     model.fit(x_train, y_train, epochs = 3)
-    model.save('numberIdentification')
+    model.save('numberIdentification.model')
+    print("model created")
