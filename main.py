@@ -24,9 +24,11 @@ getInfo.plot(x_train)
 
 x_train = ignoreGreyscale.toBlack(x_train)
 
-create_model.first_model(x_train,y_train)
+history = create_model.first_model(x_train,y_train)
 
 x_test = ignoreGreyscale.toBlack(x_test)
 
 test_model.evaluate(x_test,y_test)
+
+test_model.plot(history)
 
