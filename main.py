@@ -9,9 +9,12 @@ import pandas as pd
 
 import getInfo
 
-getInfo.shape()
+#load data
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-getInfo.plot()
+getInfo.shape(x_train, y_train, x_test, y_test)
+
+getInfo.plot(x_train)
 
 
 
