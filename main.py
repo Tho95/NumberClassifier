@@ -24,11 +24,18 @@ getInfo.plot(x_train)
 
 x_train = ignoreGreyscale.toBlack(x_train)
 
-history = create_model.first_model(x_train,y_train)
+history1 = create_model.first_model(x_train,y_train)
 
 x_test = ignoreGreyscale.toBlack(x_test)
 
 test_model.evaluate(x_test,y_test)
 
-test_model.plot(history)
+test_model.plot(history1)
 
+history2 = create_model.wide_model(x_train,y_train)
+
+history3 = create_model.deep_model(x_train,y_train)
+
+test_model.plot(history2)
+
+test_model.plot(history3)
